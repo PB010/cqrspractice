@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "CQRSInPractice\API.csproj", "{CA78E8D3-0FCD-4623-8EA4-16F5E1C8A683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{AE6CA994-E881-4C24-A38E-419F6368475D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA78E8D3-0FCD-4623-8EA4-16F5E1C8A683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA78E8D3-0FCD-4623-8EA4-16F5E1C8A683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA78E8D3-0FCD-4623-8EA4-16F5E1C8A683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA78E8D3-0FCD-4623-8EA4-16F5E1C8A683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE6CA994-E881-4C24-A38E-419F6368475D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6CA994-E881-4C24-A38E-419F6368475D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6CA994-E881-4C24-A38E-419F6368475D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6CA994-E881-4C24-A38E-419F6368475D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34BE1FB5-6693-4735-90F3-DFAD699FA575}
+	EndGlobalSection
+EndGlobal

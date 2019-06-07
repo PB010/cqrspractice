@@ -1,0 +1,4 @@
+C:\Users\User\Desktop\CQRSInPractice\CQRSInPractice\Logic\bin\Debug\netcoreapp2.1\API.dll
+C:\Users\User\Desktop\CQRSInPractice\CQRSInPractice\Logic\obj\Debug\netcoreapp2.1\Logic.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\CQRSInPractice\CQRSInPractice\Logic\obj\Debug\netcoreapp2.1\Logic.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\CQRSInPractice\CQRSInPractice\Logic\obj\Debug\netcoreapp2.1\Logic.AssemblyInfo.cs
