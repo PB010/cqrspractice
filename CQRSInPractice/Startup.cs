@@ -1,11 +1,15 @@
 ﻿using API.Utils;
-using Logic.Utils;
+using Logic.Interfaces.Repositories;
+using Logic.Interfaces.Services;
+using Logic.Repositories;
+using Logic.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using Logic;
 
 namespace API
 {
@@ -21,10 +25,15 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<StudentsDbContext>(options =>
-                options.UseSqlServer(_configuration["connectionString:toDoConnectionString"],
+                options.UseSqlServer(_configuration["ConnectionString"],
                     b => b.MigrationsAssembly(typeof(StudentsDbContext)
                         .GetTypeInfo().Assembly.GetName().Name)));
             services.AddMvc();
+
+            services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<IStudentService, StudentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

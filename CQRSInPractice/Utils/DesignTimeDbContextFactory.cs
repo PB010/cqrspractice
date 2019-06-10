@@ -1,4 +1,4 @@
-﻿using Logic.Utils;
+﻿using Logic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;

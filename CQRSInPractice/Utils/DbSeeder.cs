@@ -1,4 +1,4 @@
-﻿using Logic.Utils;
+﻿using Logic;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Utils

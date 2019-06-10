@@ -1,7 +1,8 @@
-﻿using Logic.Students;
+﻿using Logic.EntitiesConfiguration;
+using Logic.Students;
 using Microsoft.EntityFrameworkCore;
 
-namespace Logic.Utils
+namespace Logic
 {
     public class StudentsDbContext : DbContext
     {
@@ -17,6 +18,11 @@ namespace Logic.Utils
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new CourseConfiguration());
+            modelBuilder.ApplyConfiguration(new DisenrollmentConfiguration());
+            modelBuilder.ApplyConfiguration(new EnrollmentConfiguration());
+            modelBuilder.ApplyConfiguration(new StudentConfiguration());
+
             base.OnModelCreating(modelBuilder);
         }
     }

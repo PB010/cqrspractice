@@ -1,4 +1,6 @@
-﻿namespace Api.Dtos
+﻿using Logic.Students;
+
+namespace Api.Dtos
 {
     public sealed class StudentDto
     {
@@ -15,5 +17,21 @@
         public string Course2Grade { get; set; }
         public string Course2DisenrollmentComment { get; set; }
         public int? Course2Credits { get; set; }
+
+        public static StudentDto ConvertToDto(Student student)
+        {
+            return new StudentDto
+            {
+                Id = student.Id,
+                Name = student.Name,
+                Email = student.Email,
+                Course1 = student.FirstEnrollment?.Course?.Name,
+                Course1Grade = student.FirstEnrollment?.Grade.ToString(),
+                Course1Credits = student.FirstEnrollment?.Course?.Credits,
+                Course2 = student.SecondEnrollment?.Course?.Name,
+                Course2Grade = student.SecondEnrollment?.Grade.ToString(),
+                Course2Credits = student.SecondEnrollment?.Course?.Credits,
+            };
+        }
     }
 }
