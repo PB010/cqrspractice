@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj": {}
+    "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj": {
+    "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\obj\\",
+        "projectPath": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\bIur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bIur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

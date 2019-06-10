@@ -11813,23 +11813,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\bIur\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\CQRSInPractice\\API.csproj",
+      "projectUniqueName": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\CQRSInPractice\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\CQRSInPractice\\API.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\CQRSInPractice\\obj\\",
+      "projectPath": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\CQRSInPractice\\API.csproj",
+      "packagesPath": "C:\\Users\\bIur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\CQRSInPractice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bIur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11842,8 +11842,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj"
+            "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj"
             }
           }
         }
@@ -11869,6 +11869,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true

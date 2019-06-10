@@ -143,14 +143,16 @@ namespace Api.Controllers
         [HttpPut("{id}")]
         public IActionResult EditPersonalInfo(long id, [FromBody] StudentPersonalInfoDto dto)
         {
-            var student = _studentService.GetById(id);
-            if (student == null)
-                return Error($"No student found for Id {id}");
+            var command = new EditPersonalInfoCommand
+            {
+                Id = id,
+                Email = dto.Email,
+                Name = dto.Name
+            };
+            var handler = new EditPersonalInfoCommandHandler();
+            handler.Handle(command);
 
-            student.Name = dto.Name;
-            student.Email = dto.Email;
-
-            _studentService.Save();
+            
 
             return Ok();
         }
