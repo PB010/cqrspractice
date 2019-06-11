@@ -1,6 +1,7 @@
 ﻿using Logic.Interfaces.Repositories;
 using Logic.Interfaces.Services;
 using Logic.Students;
+using Logic.Students.Models;
 
 namespace Logic.Services
 {

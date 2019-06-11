@@ -1,8 +1,8 @@
-﻿namespace API.Dtos
+﻿namespace Logic.Dtos
 {
-    public sealed class StudentTransferDto
+    public sealed class StudentEnrollmentDto
     {
         public string Course { get; set; }
         public string Grade { get; set; }
-    }   
+    }
 }

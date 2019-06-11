@@ -1,4 +1,4 @@
-﻿namespace API.Dtos
+﻿namespace Logic.Dtos
 {
     public class StudentDisenrollmentDto
     {

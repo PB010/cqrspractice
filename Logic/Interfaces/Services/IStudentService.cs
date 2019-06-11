@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Logic.Students;
+using Logic.Students.Models;
 
 namespace Logic.Interfaces.Services
 {

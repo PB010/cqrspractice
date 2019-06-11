@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Logic.Students
+namespace Logic.Students.Models
 {
     public class Disenrollment : Entity
     {

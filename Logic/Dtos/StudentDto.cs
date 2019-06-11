@@ -1,6 +1,6 @@
-﻿using Logic.Students;
+﻿using Logic.Students.Models;
 
-namespace Api.Dtos
+namespace Logic.Dtos
 {
     public sealed class StudentDto
     {

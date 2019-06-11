@@ -1,15 +1,22 @@
 ﻿using API.Utils;
+using Logic;
+using Logic.Dtos;
 using Logic.Interfaces.Repositories;
 using Logic.Interfaces.Services;
 using Logic.Repositories;
 using Logic.Services;
+using Logic.Students;
+using Logic.Students.Commands;
+using Logic.Students.Handlers;
+using Logic.Students.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 using System.Reflection;
-using Logic;
 
 namespace API
 {
@@ -34,6 +41,12 @@ namespace API
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IStudentService, StudentService>();
+            services.AddTransient<ICommandHandler<EditPersonalInfoCommand>, EditPersonalInfoCommandHandler>();
+            services.AddTransient<IQueryHandler<GetStudentListQuery, List<StudentDto>>, GetStudentListHandler>();
+            services.AddSingleton<Messages>();
+            services.AddMediatR(typeof(Startup));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

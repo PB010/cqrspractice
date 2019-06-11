@@ -2,6 +2,7 @@
 using Logic.Interfaces.Services;
 using Logic.Students;
 using System.Collections.Generic;
+using Logic.Students.Models;
 
 namespace Logic.Services
 {

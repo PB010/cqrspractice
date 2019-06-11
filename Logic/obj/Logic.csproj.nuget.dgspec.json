@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj": {}
+    "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj": {
+    "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\bIur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bIur\\Desktop\\Asp.Net\\CQRS\\Logic\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\CQRSInPractice\\CQRSInPractice\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bIur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,18 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "CSharpFunctionalExtensions": {
+              "target": "Package",
+              "version": "[1.18.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",

@@ -1,13 +1,15 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "7b930ec545681c37c1a0d1bcaf2c1592487d87bf"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Logic/1.0.0": {
         "dependencies": {
+          "CSharpFunctionalExtensions": "1.18.1",
+          "MediatR": "7.0.0",
           "Microsoft.EntityFrameworkCore": "2.1.1.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.1.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1.0",
@@ -15,6 +17,22 @@
         },
         "runtime": {
           "Logic.dll": {}
+        }
+      },
+      "CSharpFunctionalExtensions/1.18.1": {
+        "runtime": {
+          "lib/netstandard2.0/CSharpFunctionalExtensions.dll": {
+            "assemblyVersion": "1.18.1.0",
+            "fileVersion": "1.18.1.0"
+          }
+        }
+      },
+      "MediatR/7.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore/2.1.1.0": {
@@ -56,6 +74,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CSharpFunctionalExtensions/1.18.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yT5XXQFwB99MEkDIqGoy1uxiGI87EfTyDEq8E9RBfeCE7+3NKD6TxP3fux8ZP+UNF3I8cfKtko/I5PI5VROmLg==",
+      "path": "csharpfunctionalextensions/1.18.1",
+      "hashPath": "csharpfunctionalextensions.1.18.1.nupkg.sha512"
+    },
+    "MediatR/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sgfHxkBsmMlHOD564SnLqTvSbAuGlFiZfc6ybxBSI1wYV/2u+Y5TXtFoIhCISFg5/s/6aMvB338QC2JseHsjTA==",
+      "path": "mediatr/7.0.0",
+      "hashPath": "mediatr.7.0.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/2.1.1.0": {
       "type": "reference",

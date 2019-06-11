@@ -1,4 +1,4 @@
-﻿namespace Logic.Students
+﻿namespace Logic.Students.Models
 {
     public abstract class Entity
     {

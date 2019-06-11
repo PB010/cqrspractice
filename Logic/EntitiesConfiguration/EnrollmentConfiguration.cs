@@ -1,4 +1,5 @@
 ﻿using Logic.Students;
+using Logic.Students.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

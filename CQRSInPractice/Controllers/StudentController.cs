@@ -1,10 +1,12 @@
-﻿using Api.Dtos;
-using API.Dtos;
+﻿using Logic.Dtos;
 using Logic.Interfaces.Services;
 using Logic.Students;
+using Logic.Students.Commands;
+using Logic.Students.Handlers;
+using Logic.Students.Models;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Linq;
 
 namespace Api.Controllers
 {
@@ -13,47 +15,43 @@ namespace Api.Controllers
     {
         private readonly ICourseService _courseService;
         private readonly IStudentService _studentService;
+        private readonly Messages _messages;
+        private readonly IMediator _mediator;
 
 
         public StudentController(ICourseService courseService,
-            IStudentService studentService)
+            IStudentService studentService, Messages messages,
+            IMediator mediator)
         {
             _courseService = courseService;
             _studentService = studentService;
+            _messages = messages;
+            _mediator = mediator;
         }
 
-        [HttpGet]
-        public IActionResult GetList(string enrolled, int? number)
-        {
-            var students = _studentService.GetList(enrolled, number)
-                .Select(StudentDto.ConvertToDto);
-            
-            return Ok(students);
-        }
+        //[HttpGet]
+        //public async Task<StudentDto> GetList(string enrolled, int? number)
+        //{
+        //    var result = await _mediator.Send(new GetStudentListQuery(enrolled, number));
+        //    var handler = new GetStudentListHandler(_studentService);
+        //    return Ok(handler.Handle(new GetStudentListQuery(enrolled, number)));
+        //    //return Ok(_messages.Dispatch(new GetStudentListQuery(enrolled, number)));
+        //}
 
         
 
         [HttpPost]
         public IActionResult Register([FromBody] NewStudentDto dto)
         {
-            var student = new Student(dto.Name, dto.Email);
+            var handler = new RegisterCommandHandler(_studentService, _courseService);
 
-            if (dto.Course1 != null && dto.Course1Grade != null)
-            {
-                var course = _courseService.GetByName(dto.Course1);
-                student.Enroll(course, Enum.Parse<Grade>(dto.Course1Grade));
-            }
-
-            if (dto.Course2 != null && dto.Course2Grade != null)
-            {
-                var course = _courseService.GetByName(dto.Course2);
-                student.Enroll(course, Enum.Parse<Grade>(dto.Course2Grade));
-            }
-
-            _studentService.Add(student);
-            _studentService.Save();
-
-            return Ok();
+            return Ok(handler.Handle(new RegisterCommand(
+                dto.Name,
+                dto.Email,
+                dto.Course1,
+                dto.Course1Grade,
+                dto.Course2,
+                dto.Course2Grade)));
         }
 
         [HttpDelete("{id}")]
@@ -143,18 +141,11 @@ namespace Api.Controllers
         [HttpPut("{id}")]
         public IActionResult EditPersonalInfo(long id, [FromBody] StudentPersonalInfoDto dto)
         {
-            var command = new EditPersonalInfoCommand
-            {
-                Id = id,
-                Email = dto.Email,
-                Name = dto.Name
-            };
-            var handler = new EditPersonalInfoCommandHandler();
-            handler.Handle(command);
+            var command = new EditPersonalInfoCommand(id, dto.Name, dto.Email);
 
-            
+            var result = _messages.Dispatch(command);
 
-            return Ok();
+            return result.IsSuccess ? Ok() : Error(result.Error);
         }
     }
 }

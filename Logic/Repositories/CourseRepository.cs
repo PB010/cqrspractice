@@ -1,6 +1,7 @@
 ﻿using Logic.Interfaces.Repositories;
 using Logic.Students;
 using System.Linq;
+using Logic.Students.Models;
 
 namespace Logic.Repositories
 {
